@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refined Piano</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: black;
+    }
+
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .piano {
+      position: relative;
+      display: flex;
+
+    }
+
+    .whitekey {
+      width: 2.5em;
+      height: 9.5em;
+      background-color: white;
+      border: 0.5px solid black;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 8px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+    }
+
+    .whitekey:active {
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .blackkey {
+      width: 1.5em;
+      height: 6em;
+      background-color: black;
+      color: white;
+      border-radius: 0 0 6px 6px;
+      position: absolute;
+      top: 0;
+      left: 20%;
+      cursor: pointer;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 6px;
+    }
+
+    .blackkey:active {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="piano">
+    
+    <div class="whitekey" data-audio="28">C</div>
+    <div class="whitekey" data-audio="30">D</div>
+    <div class="whitekey" data-audio="32">E</div>
+    <div class="whitekey" data-audio="33">F</div>
+    <div class="whitekey" data-audio="35">G</div>
+    <div class="whitekey" data-audio="37">A</div>
+    <div class="whitekey" data-audio="39">B</div>
+    <div class="whitekey" data-audio="40">C</div>
+    <div class="whitekey" data-audio="42">D</div>
+    <div class="whitekey" data-audio="44">E</div>
+
+    
+    <div class="blackkey" data-audio="29" style="left: 1.7em;">C#</div>
+    <div class="blackkey" data-audio="31" style="left: 4.2em;">D#</div>
+    <div class="blackkey" data-audio="34" style="left: 9.2em;">F#</div>
+    <div class="blackkey" data-audio="36" style="left: 11.7em;">G#</div>
+    <div class="blackkey" data-audio="38" style="left: 14.2em;">A#</div>
+    <div class="blackkey" data-audio="41" style="left: 19.2em;">C#</div>
+    <div class="blackkey" data-audio="43" style="left: 21.7em;">D#</div>
+  </div>
+
+  <script src="piano.js"></script>
+</body>
+</html>
